@@ -2,6 +2,7 @@
 
 import sys, collections
 from omada import Omada
+import os
 
 def format_poe(poe):
 	if poe == 0:
@@ -16,12 +17,13 @@ def main():
 		print( f"usage: {sys.argv[0]} [profile name] [0|1|2]" )
 		return
 
-	omada = Omada('omada.cfg')
+	omada = Omada(os.path.join(os.path.dirname(__file__), 'omada.cfg'))
 	omada.login()
 
 	if len(sys.argv) > 2:
 		profileId = omada.getProfileId(sys.argv[1])
 		settings = omada.getProfileSettings(profileId)
+		print(settings)
 		settings['poe'] = sys.argv[2]
 		omada.setProfileSettings(profileId, settings)
 

@@ -1,5 +1,7 @@
 # Omada API
 
+Forked from [thannerfabian](https://github.com/thannerfabian/tplink)'s version which itself was forked from [ghaberek](ghaberek)'s original.
+
 A simple Python wrapper for the [TP-Link Omada Software Controller](https://www.tp-link.com/us/support/download/omada-software-controller/) API.
 
 [![Test Python versions](https://github.com/ghaberek/omada-api/actions/workflows/versions.yml/badge.svg)](https://github.com/ghaberek/omada-api/actions/workflows/versions.yml)
